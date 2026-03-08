@@ -1,4 +1,4 @@
-public class tugaspilaroop {
+public class tugaspilaroop{
     public static void main(String[] args) {
 
         Kucing kucing = new Kucing("Hime", 1, "Putih");
@@ -15,25 +15,25 @@ public class tugaspilaroop {
     }
 }
 
-abstract class Hewan {
+abstract class Hewan{
 
     private String nama;
     private int umur;
 
-    public Hewan(String nama, int umur) {
+    public Hewan(String nama, int umur){
         this.nama = nama;
         this.umur = umur;
     }
 
-    public String getNama() {
+    public String getNama(){
         return nama;
     }
 
-    public int getUmur() {
+    public int getUmur(){
         return umur;
     }
 
-    public void setUmur(int umur) {
+    public void setUmur(int umur){
         if (umur > 0)
             this.umur = umur;
         else
@@ -42,50 +42,51 @@ abstract class Hewan {
 
     public abstract void suara();
 
-    public void info() {
+    public void info(){
         System.out.println("Nama : " + nama);
         System.out.println("Umur : " + umur + " tahun");
     }
 }
 
-class Kucing extends Hewan {
+class Kucing extends Hewan{
 
     private String warna;
 
-    public Kucing(String nama, int umur, String warna) {
+    public Kucing(String nama, int umur, String warna){
         super(nama, umur);
         this.warna = warna;
     }
 
     @Override
-    public void suara() {
+    public void suara(){
         System.out.println("Suara " + getNama() + " : Meng");
     }
 
     @Override
-    public void info() {
+    public void info(){
         super.info();
         System.out.println("Warna: " + warna);
     }
 }
 
-class Anjing extends Hewan {
+class Anjing extends Hewan{
 
     private String ras;
 
-    public Anjing(String nama, int umur, String ras) {
+    public Anjing(String nama, int umur, String ras){
         super(nama, umur);
         this.ras = ras;
     }
 
     @Override
-    public void suara() {
+    public void suara(){
         System.out.println("Suara " + getNama() + " : Guk Guk");
     }
 
     @Override
-    public void info() {
+    public void info(){
         super.info();
         System.out.println("Ras  : " + ras);
     }
 }
+
